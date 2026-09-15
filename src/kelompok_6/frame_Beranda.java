@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package kelompok_6;
+import java.awt.CardLayout;
 
 /**
  *
  * @author achmad_khusnul_yakin
  */
 public class frame_Beranda extends javax.swing.JFrame {
+    CardLayout cardlayout;
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frame_Beranda.class.getName());
 
@@ -17,6 +19,19 @@ public class frame_Beranda extends javax.swing.JFrame {
      */
     public frame_Beranda() {
         initComponents();
+        
+        //memasukkkan biodata ke panel bawah
+        //nama link harus sama dengan nama file panel
+        cardlayout = (CardLayout) panel_Bawah.getLayout();
+        
+        panel_Bawah.add(new PanelAdit(), "ADITYA");
+        panel_Bawah.add(new Panel_audii(), "AUDI");
+        panel_Bawah.add(new PanelShofi(), "SHOFI");
+        panel_Bawah.add(new Panel_habib(), "KHABIB");
+        panel_Bawah.add(new PanelRezaa(), "ZAKI");
+        panel_Bawah.add(new PanelYakinn(), "YAKIN");
+        
+        cardlayout.show(panel_Bawah, "ADITYA");
     }
 
     /**
@@ -34,17 +49,17 @@ public class frame_Beranda extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         panel_Yakin = new javax.swing.JPanel();
-        bAditya = new javax.swing.JButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
         panel_Yakin1 = new javax.swing.JPanel();
-        bAudi = new javax.swing.JButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
         panel_Yakin2 = new javax.swing.JPanel();
-        bKhabib = new javax.swing.JButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
         panel_Yakin3 = new javax.swing.JPanel();
-        bShofi = new javax.swing.JButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
         panel_Yakin4 = new javax.swing.JPanel();
-        bYakin = new javax.swing.JButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
         panel_Yakin5 = new javax.swing.JPanel();
-        bZaki = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
         panel_Content = new javax.swing.JPanel();
         panel_Atas = new javax.swing.JPanel();
         panel_Bio = new javax.swing.JPanel();
@@ -55,6 +70,7 @@ public class frame_Beranda extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Beranda");
+        setMinimumSize(new java.awt.Dimension(1000, 377));
 
         panel_Sidebar.setBackground(java.awt.Color.blue);
         panel_Sidebar.setPreferredSize(new java.awt.Dimension(300, 600));
@@ -83,73 +99,73 @@ public class frame_Beranda extends javax.swing.JFrame {
 
         panel_Yakin.setLayout(new java.awt.BorderLayout());
 
-        bAditya.setBackground(java.awt.Color.blue);
-        bAditya.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bAditya.setForeground(new java.awt.Color(255, 255, 255));
-        bAditya.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bAditya.setText("Biodata Aditya");
-        bAditya.setIconTextGap(10);
-        panel_Yakin.add(bAditya, java.awt.BorderLayout.CENTER);
+        jToggleButton6.setBackground(java.awt.Color.blue);
+        jToggleButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
+        jToggleButton6.setText("Biodata Aditya");
+        jToggleButton6.addActionListener(this::jToggleButton6ActionPerformed);
+        panel_Yakin.add(jToggleButton6, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin);
 
         panel_Yakin1.setLayout(new java.awt.BorderLayout());
 
-        bAudi.setBackground(java.awt.Color.blue);
-        bAudi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bAudi.setForeground(new java.awt.Color(255, 255, 255));
-        bAudi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bAudi.setText("Biodata Audi");
-        bAudi.setIconTextGap(10);
-        panel_Yakin1.add(bAudi, java.awt.BorderLayout.CENTER);
+        jToggleButton5.setBackground(java.awt.Color.blue);
+        jToggleButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
+        jToggleButton5.setText("Biodata Audi");
+        jToggleButton5.addActionListener(this::jToggleButton5ActionPerformed);
+        panel_Yakin1.add(jToggleButton5, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin1);
 
         panel_Yakin2.setLayout(new java.awt.BorderLayout());
 
-        bKhabib.setBackground(java.awt.Color.blue);
-        bKhabib.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bKhabib.setForeground(new java.awt.Color(255, 255, 255));
-        bKhabib.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bKhabib.setText("Biodata Khabib");
-        bKhabib.setIconTextGap(10);
-        panel_Yakin2.add(bKhabib, java.awt.BorderLayout.CENTER);
+        jToggleButton4.setBackground(java.awt.Color.blue);
+        jToggleButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
+        jToggleButton4.setText("Biodata Shofi");
+        jToggleButton4.addActionListener(this::jToggleButton4ActionPerformed);
+        panel_Yakin2.add(jToggleButton4, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin2);
 
         panel_Yakin3.setLayout(new java.awt.BorderLayout());
 
-        bShofi.setBackground(java.awt.Color.blue);
-        bShofi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bShofi.setForeground(new java.awt.Color(255, 255, 255));
-        bShofi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bShofi.setText("Biodata Shofi");
-        bShofi.setIconTextGap(10);
-        panel_Yakin3.add(bShofi, java.awt.BorderLayout.CENTER);
+        jToggleButton3.setBackground(java.awt.Color.blue);
+        jToggleButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
+        jToggleButton3.setText("Biodata Khabib");
+        jToggleButton3.addActionListener(this::jToggleButton3ActionPerformed);
+        panel_Yakin3.add(jToggleButton3, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin3);
 
         panel_Yakin4.setLayout(new java.awt.BorderLayout());
 
-        bYakin.setBackground(java.awt.Color.blue);
-        bYakin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bYakin.setForeground(new java.awt.Color(255, 255, 255));
-        bYakin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bYakin.setText("Biodata Yakin");
-        bYakin.setIconTextGap(10);
-        panel_Yakin4.add(bYakin, java.awt.BorderLayout.CENTER);
+        jToggleButton2.setBackground(java.awt.Color.blue);
+        jToggleButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Logo/icons8-profile-30.png"))); // NOI18N
+        jToggleButton2.setText("Biodata Reza");
+        jToggleButton2.addActionListener(this::jToggleButton2ActionPerformed);
+        panel_Yakin4.add(jToggleButton2, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin4);
 
         panel_Yakin5.setLayout(new java.awt.BorderLayout());
 
-        bZaki.setBackground(java.awt.Color.blue);
-        bZaki.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bZaki.setForeground(new java.awt.Color(255, 255, 255));
-        bZaki.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
-        bZaki.setText("Biodata Zaki");
-        bZaki.setIconTextGap(10);
-        panel_Yakin5.add(bZaki, java.awt.BorderLayout.CENTER);
+        jToggleButton1.setBackground(java.awt.Color.blue);
+        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/Icon/icons8-profile-30.png"))); // NOI18N
+        jToggleButton1.setText("Biodata Yakin");
+        jToggleButton1.addActionListener(this::jToggleButton1ActionPerformed);
+        panel_Yakin5.add(jToggleButton1, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(panel_Yakin5);
 
@@ -197,6 +213,36 @@ public class frame_Beranda extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "YAKIN");
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "AUDI");
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "ADITYA");
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "SHOFI");
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "KHABIB");
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+        cardlayout.show(panel_Bawah, "ZAKI");
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -223,18 +269,18 @@ public class frame_Beranda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bAditya;
-    private javax.swing.JButton bAudi;
-    private javax.swing.JButton bKhabib;
-    private javax.swing.JButton bShofi;
-    private javax.swing.JButton bYakin;
-    private javax.swing.JButton bZaki;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JPanel panel_Atas;
     private javax.swing.JPanel panel_Bawah;
     private javax.swing.JPanel panel_Bio;

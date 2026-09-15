@@ -69,7 +69,7 @@ public class PanelRezaa extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("https://github.com/githabib2303-ai");
+        jLabel7.setText("https://github.com/zakireza620-beep");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -90,15 +90,15 @@ public class PanelRezaa extends javax.swing.JPanel {
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel12.setText("SHOFI PUTRI FEBRIANTI");
+        jLabel12.setText("ZAKI REZA PAHLEVI");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel13.setText("NGANJUK , 19 FEBRUARI 2007");
+        jLabel13.setText("NGANJUK , 13 APRIL 2007");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel14.setText("202557201038");
+        jLabel14.setText("202557201043");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -106,11 +106,11 @@ public class PanelRezaa extends javax.swing.JPanel {
         jLabel15.setText("Program Studi : Sistem Informasi (S.I)");
         add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 490, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/img/WhatsApp Image 2026-09-14 at 17.20.05  n.jpeg"))); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/img/Reza.png"))); // NOI18N
         jLabel16.setPreferredSize(new java.awt.Dimension(190, 250));
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 220, 250));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, 250));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/img/qr Shofi.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kelompok_6/img/qr Reza.png"))); // NOI18N
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
